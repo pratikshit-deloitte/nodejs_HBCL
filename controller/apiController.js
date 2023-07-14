@@ -55,3 +55,27 @@ export const getAllMatchesByDate = (req, res) => {
     data: filteredMatches,
   });
 };
+
+export const getPlayerDetails =(req,res) =>{
+  const{playerId,teamId} =req.params;
+  
+  const teams = AllTeamsData();
+  const match = AllMatchesData();
+  const team = teams.find(team => team.id === teamId);
+  if (!team) {
+    return res.status(404).json({ error: "Team not found" });
+  }
+
+  // Find the player in the team
+  const playerDetails = team.players.find(player => player.id === playerId);
+  if (!playerDetails) {
+    return res.status(404).json({ error: "Player not found" });
+  }
+
+
+  res.status(200).json({
+    message: playerDetails.length ? "Data found" : "",
+    data: playerDetails,
+  });
+};
+
