@@ -2,9 +2,9 @@ export const matches = [
   {
     id: "1",
 
-    team1: "Team A",
+    team1: "India",
 
-    team2: "Team B",
+    team2: "Australia",
 
     date: new Date("2023-01-03"),
 
@@ -18,9 +18,9 @@ export const matches = [
   {
     id: "2",
 
-    team1: "Team C",
+    team1: "Sri Lanka",
 
-    team2: "Team D",
+    team2: "Newzeland",
 
     date: new Date("2025-12-01"),
 
@@ -34,9 +34,9 @@ export const matches = [
   {
     id: "3",
 
-    team1: "Team A",
+    team1: "India",
 
-    team2: "Team C",
+    team2: "Sri Lanka",
 
     date: new Date("2020-01-09"),
 

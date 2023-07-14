@@ -2,13 +2,13 @@ export const teams = [
   {
     id: "1",
 
-    name: "Team A",
+    name: "India",
 
     players: [
       {
         id: "1",
 
-        name: "Player A",
+        name: "Sachin",
 
         score: 100,
 
@@ -18,7 +18,7 @@ export const teams = [
       {
         id: "2",
 
-        name: "Player B",
+        name: "KL rahul",
 
         score: 10,
 
@@ -28,7 +28,7 @@ export const teams = [
       {
         id: "3",
 
-        name: "Player C",
+        name: "Shewag",
 
         score: 160,
 
@@ -40,13 +40,13 @@ export const teams = [
   {
     id: "2",
 
-    name: "Team B",
+    name: "Australia",
 
     players: [
       {
         id: "1",
 
-        name: "Player D",
+        name: "andrew",
 
         score: 120,
 
@@ -56,7 +56,7 @@ export const teams = [
       {
         id: "2",
 
-        name: "Player E",
+        name: "micthel",
 
         score: 0,
 
@@ -66,7 +66,7 @@ export const teams = [
       {
         id: "3",
 
-        name: "Player F",
+        name: "ricky",
 
         score: 0,
 
@@ -78,13 +78,13 @@ export const teams = [
   {
     id: "3",
 
-    name: "Team C",
+    name: "New Zealand",
 
     players: [
       {
         id: "1",
 
-        name: "Player G",
+        name: "Hanry",
 
         score: 67,
 
@@ -94,7 +94,7 @@ export const teams = [
       {
         id: "2",
 
-        name: "Player H",
+        name: "markus",
 
         score: 90,
 
@@ -104,7 +104,7 @@ export const teams = [
       {
         id: "3",
 
-        name: "Player I",
+        name: "richards",
 
         score: 60,
 
@@ -116,13 +116,13 @@ export const teams = [
   {
     id: "4",
 
-    name: "Team D",
+    name: "Sri lanka",
 
     players: [
       {
         id: "1",
 
-        name: "Player J",
+        name: "jaywardhana",
 
         score: 40,
 
@@ -132,7 +132,7 @@ export const teams = [
       {
         id: "2",
 
-        name: "Player K",
+        name: "muthaiya",
 
         score: 50,
 
@@ -142,7 +142,7 @@ export const teams = [
       {
         id: "3",
 
-        name: "Player L",
+        name: "Malinga",
 
         score: 50,
 

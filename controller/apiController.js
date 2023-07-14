@@ -1,8 +1,8 @@
-import { getAllMatchesData } from "../service/Service.js";
-import { getAllTeamsData } from "../service/Service.js";
+import { AllMatchesData } from "../service/Service.js";
+import { AllTeamsData } from "../service/Service.js";
 
 export const getAllMatches = (req, res) => {
-  const data = getAllMatchesData();
+  const data = AllMatchesData();
   res.status(200).json({
     message: data.length ? "Data found" : "Data not found",
     data: data,
@@ -10,7 +10,7 @@ export const getAllMatches = (req, res) => {
 };
 
 export const getAllTeams = (req, res) => {
-  const data = getAllTeamsData();
+  const data = AllTeamsData();
   res.status(200).json({
     message: data.length ? "Data found" : "Data not found",
     data: data,
@@ -18,7 +18,7 @@ export const getAllTeams = (req, res) => {
 };
 
 export const getLeaderboard = (req, res) => {
-  const leaderboard = getAllTeamsData().map((team) => {
+  const leaderboard = AllTeamsData().map((team) => {
     const topScorers = team.players.filter(
       (player) => player.score === Math.max(...team.players.map((p) => p.score))
     );
@@ -45,7 +45,7 @@ export const getLeaderboard = (req, res) => {
 
 export const getAllMatchesByDate = (req, res) => {
   const { date } = req.params;
-  const matches = getAllMatchesData();
+  const matches = AllMatchesData();
   const filteredMatches = date
     ? matches.filter((match) => match.date.toISOString().split("T")[0] === date)
     : matches;

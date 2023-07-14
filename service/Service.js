@@ -1,8 +1,8 @@
 import { matches } from "../data/matches.js";
 import { teams } from "../data/teams.js";
-export const getAllMatchesData = () => {
+export const AllMatchesData = () => {
   return matches;
 };
-export const getAllTeamsData = () => {
+export const AllTeamsData = () => {
   return teams;
-};
+}

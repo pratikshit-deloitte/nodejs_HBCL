@@ -4,11 +4,11 @@ import {
     getLeaderboard,
     getAllMatchesByDate,
   } from '../controller/apiController.js';
-  import { getAllMatchesData, getAllTeamsData } from '../service/Service.js';
+  import { AllMatchesData, AllTeamsData } from '../service/Service.js';
   
   jest.mock('../service/Service.js', () => ({
-    getAllMatchesData: jest.fn(),
-    getAllTeamsData: jest.fn(),
+    AllMatchesData: jest.fn(),
+    AllTeamsData: jest.fn(),
   }));
   
   describe('Controller Tests', () => {
@@ -19,7 +19,7 @@ import {
     describe('getAllMatches', () => {
       it('should return data when available', () => {
         const mockData = [{ id: 1, name: 'Match 1' }];
-        getAllMatchesData.mockReturnValue(mockData);
+        AllMatchesData.mockReturnValue(mockData);
   
         const res = {
           status: jest.fn().mockReturnThis(),
@@ -36,7 +36,7 @@ import {
       });
   
       it('should return data not found message when no data available', () => {
-        getAllMatchesData.mockReturnValue([]);
+        AllMatchesData.mockReturnValue([]);
   
         const res = {
           status: jest.fn().mockReturnThis(),
@@ -56,7 +56,7 @@ import {
     describe('getAllTeams', () => {
       it('should return data when available', () => {
         const mockData = [{ id: 1, name: 'Team 1' }];
-        getAllTeamsData.mockReturnValue(mockData);
+        AllTeamsData.mockReturnValue(mockData);
   
         const res = {
           status: jest.fn().mockReturnThis(),
@@ -73,7 +73,7 @@ import {
       });
   
       it('should return data not found message when no data available', () => {
-        getAllTeamsData.mockReturnValue([]);
+        AllTeamsData.mockReturnValue([]);
   
         const res = {
           status: jest.fn().mockReturnThis(),
@@ -109,7 +109,7 @@ import {
           },
         ];
   
-        getAllTeamsData.mockReturnValue(mockTeamsData);
+        AllTeamsData.mockReturnValue(mockTeamsData);
   
         const res = {
           status: jest.fn().mockReturnThis(),
@@ -137,7 +137,7 @@ import {
       });
   
       it('should return data not found message when no leaderboard data available', () => {
-        getAllTeamsData.mockReturnValue([]);
+        AllTeamsData.mockReturnValue([]);
   
         const res = {
           status: jest.fn().mockReturnThis(),
@@ -161,7 +161,7 @@ import {
           { id: 2, name: 'Match 2', date: new Date('2023-07-02') },
         ];
   
-        getAllMatchesData.mockReturnValue(mockData);
+        AllMatchesData.mockReturnValue(mockData);
   
         const req = {
           params: { date: '2023-07-01' },
@@ -187,7 +187,7 @@ import {
           { id: 2, name: 'Match 2', date: new Date('2023-07-02') },
         ];
   
-        getAllMatchesData.mockReturnValue(mockData);
+        AllMatchesData.mockReturnValue(mockData);
   
         const req = {
           params: { date: undefined },
@@ -208,7 +208,7 @@ import {
       });
   
       it('should return data not found message when no matches available', () => {
-        getAllMatchesData.mockReturnValue([]);
+        AllMatchesData.mockReturnValue([]);
   
         const req = {
           params: { date: '2023-07-01' },
